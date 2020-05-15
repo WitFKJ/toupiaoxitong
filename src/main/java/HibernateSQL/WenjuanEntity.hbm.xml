@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="HibernateSQL.WenjuanEntity" table="wenjuan" schema="toupiaoxiong">
+        <id name="wenjuanNum">
+            <column name="wenjuan_num" sql-type="int(11)"/>
+        </id>
+        <property name="wenjuanClass">
+            <column name="wenjuan_class" sql-type="char(20)" length="20" not-null="true"/>
+        </property>
+        <property name="wenjuanQuest">
+            <column name="wenjuan_quest" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="wenjuanTitle">
+            <column name="wenjuan_title" sql-type="char(40)" length="40" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

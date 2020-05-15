@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3305/toupiaoxiong</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <mapping class="HibernateSQL.CunchuEntity"/>
+        <mapping class="HibernateSQL.OpEntity"/>
+        <mapping class="HibernateSQL.QuestEntity"/>
+        <mapping class="HibernateSQL.UserEntity"/>
+        <mapping class="HibernateSQL.WenjuanEntity"/>
+        <mapping class="HibernateSQL.XuanxiangEntity"/>
+        <mapping resource="HibernateSQL/CunchuEntity.hbm.xml"/>
+        <mapping resource="HibernateSQL/OpEntity.hbm.xml"/>
+        <mapping resource="HibernateSQL/QuestEntity.hbm.xml"/>
+        <mapping resource="HibernateSQL/UserEntity.hbm.xml"/>
+        <mapping resource="HibernateSQL/WenjuanEntity.hbm.xml"/>
+        <mapping resource="HibernateSQL/XuanxiangEntity.hbm.xml"/>
+        <property name="connection.username">root</property>
+        <property name="connection.password">2482955</property>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

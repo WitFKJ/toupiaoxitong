@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="HibernateSQL.UserEntity" table="user" schema="toupiaoxiong">
+        <id name="userNum">
+            <column name="user_num" sql-type="int(11)"/>
+        </id>
+        <property name="userName">
+            <column name="user_name" sql-type="char(20)" length="20" not-null="true"/>
+        </property>
+        <property name="userPasswd">
+            <column name="user_passwd" sql-type="char(20)" length="20"/>
+        </property>
+    </class>
+</hibernate-mapping>

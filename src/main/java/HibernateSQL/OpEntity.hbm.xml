@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="HibernateSQL.OpEntity" table="op" schema="toupiaoxiong">
+        <id name="opNum">
+            <column name="op_num" sql-type="int(11)"/>
+        </id>
+        <property name="opName">
+            <column name="op_name" sql-type="char(30)" length="30" not-null="true"/>
+        </property>
+        <property name="opPasswd">
+            <column name="op_passwd" sql-type="char(20)" length="20" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

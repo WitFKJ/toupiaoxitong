@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="HibernateSQL.QuestEntity" table="quest" schema="toupiaoxiong">
+        <composite-id mapped="true" class="HibernateSQL.QuestEntityPK">
+            <key-property name="questWenjuanNum">
+                <column name="quest_wenjuan_num" sql-type="int(11)"/>
+            </key-property>
+            <key-property name="questWhere">
+                <column name="quest_where" sql-type="int(11)"/>
+            </key-property>
+        </composite-id>
+        <property name="questXuanxiang">
+            <column name="quest_xuanxiang" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="questClass">
+            <column name="quest_class" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="questTitle">
+            <column name="quest_title" sql-type="char(100)" length="100" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
